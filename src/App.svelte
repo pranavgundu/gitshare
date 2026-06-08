@@ -3,6 +3,7 @@
   import { auth } from './lib/auth.svelte'
   import Auth from './lib/Auth.svelte'
   import Passkeys from './lib/Passkeys.svelte'
+  import Connections from './lib/Connections.svelte'
 </script>
 
 <section id="center">
@@ -17,6 +18,7 @@
       <h1>Welcome</h1>
       <p>Signed in as <code>{auth.user.email}</code></p>
     </div>
+    <Connections />
     <Passkeys />
     <button class="counter" onclick={() => auth.signOut()}>Sign out</button>
   {:else}
